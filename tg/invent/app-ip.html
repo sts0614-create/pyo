@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>게임 · 지식재산 가려내기</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@700;900&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../../assets/game.css">
+</head>
+<body>
+<div class="top"><a href="../index.html#u2">← 기술·가정 목록</a><div class="rounds" id="rounds"></div></div>
+<main>
+  <h1>지식재산 가려내기</h1>
+  <p class="q" id="q"></p>
+  <div class="hud"><span>맞힌 수 <b id="score">0</b></span><span>연속 <b id="streak">0</b></span><span>남은 카드 <b id="left">0</b></span></div>
+  <div class="card" id="card"></div>
+  <div class="bins" id="bins"></div>
+  <div class="flash" id="flash" aria-live="polite"></div>
+  <p class="how">단추를 누르거나, 키보드 1~4로 고릅니다.</p>
+  <div class="review" id="review" hidden></div>
+</main>
+<script>
+window.R={
+ kind:{name:'어떤 권리일까',q:'대상을 알맞은 권리로 보내자.',bins:[['특허권','기술'],['상표권','이름·표지'],['저작권','창작물']],cards:[
+  ['새로운 충전 방식의 기술',0,'발명한 기술은 특허로 보호한다.'],['방수 기능을 개선한 새 장치',0,'기술적 발명.'],['과자 이름과 로고',1,'상품을 구별하는 표지.'],['가게 이름을 나타내는 표지',1,'상표.'],
+  ['직접 쓴 소설',2,'창작물.'],['직접 찍은 사진',2,'창작물.'],['직접 작곡한 노래',2,'창작물.']]},
+ step:{name:'발명의 어느 단계일까',q:'활동을 알맞은 단계로 보내자.',bins:[['문제 발견','불편 찾기'],['아이디어 구상','기법으로 내기'],['만들고 평가','시제품·개선']],cards:[
+  ['일상의 불편을 관찰한다',0,'문제 발견.'],['두 물건을 합쳐 본다',1,'구상.'],['종이 모형을 만든다',2,'시제품.'],['쓰는 사람에게 써 보게 한다',2,'평가.'],['불편한 점을 한 문장으로 쓴다',0,'문제 발견.'],['재료를 바꿔 본다',1,'구상.']]},
+ claim:{name:'사실일까 주장일까',q:'2단원 자료에 담긴 말을 가려내자.',bins:[['사실','확인할 수 있는 일'],['주장','판단·평가']],cards:[
+  ['발명은 없던 것을 만들어 내는 일이다.',0,'개념.'],['모든 발명은 사회에 이익만 준다.',1,'주장: 부담도 있다.'],
+  ['출처를 밝히면 항상 허락 없이 써도 된다.',1,'주장: 이용 조건도 확인해야 한다.'],['특허는 새롭고 쓸모 있는 기술을 보호한다.',0,'개념.'],
+  ['인터넷에 있는 그림은 모두 자유롭게 써도 된다.',1,'주장: 저작권이 있을 수 있다.'],['저작권은 글·음악·사진 등 창작물의 권리이다.',0,'개념.']]}
+};
+</script>
+<script src="../../assets/game-sort.js"></script>
+</body>
+</html>

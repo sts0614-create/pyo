@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>시뮬레이션 · 기술·가정 2단원 발명과 지식재산</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@700;900&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../../assets/sim.css">
+<style>
+table.t{border-collapse:collapse;width:100%;font-size:14px}table.t th,table.t td{border-bottom:1px solid var(--faint);padding:6px 8px;text-align:left;vertical-align:top}
+.meter{margin:6px 0}.meter span{display:flex;justify-content:space-between;font-size:13px;color:var(--dim)}.meter i{display:block;height:10px;border-radius:5px;background:var(--faint);overflow:hidden}.meter i b{display:block;height:100%;background:var(--gold);transition:width .3s}
+.big{font-family:var(--serif);font-weight:900}.pick[aria-pressed=true]{border-color:var(--gold)}.pick small{display:block;color:var(--dim);font-size:12.5px;margin-top:2px}
+.fb{margin-top:12px;background:var(--panel);border-left:3px solid var(--gold);border-radius:0 10px 10px 0;padding:10px 12px;font-size:14px}.chk{display:flex;gap:8px;align-items:center;margin:6px 0;font-size:14px}.chk input{accent-color:var(--gold)}
+</style>
+</head>
+<body>
+<div class="top"><a href="../index.html#u2">← 기술·가정 목록</a><nav id="nav"></nav></div>
+
+<section class="panel" data-lesson="1"><h1>발명의 과정</h1><p class="q">단계가 진행될수록 아이디어는 얼마나 다듬어질까?</p><div class="stage"><div><div class="card"><div class="big" id="d1" style="font-size:28px"></div><p id="t1" style="margin:6px 0 0"></p><div class="meter"><span>아이디어 완성도(모형)<b id="m1"></b></span><i><b id="b1" style="width:0"></b></i></div></div></div><div class="side"><div class="rng"><label for="r1">단계 <b id="r1V"></b></label><input type="range" id="r1" min="0" max="3" step="1" value="0"></div><p class="note">막대 값은 이해를 돕기 위한 <b>모형</b>으로 실제 통계가 아닙니다.</p></div></div>
+<script>(function(){var D=[["불편 발견", "막연한 생각", 15], ["아이디어 구상", "여러 후보가 생기다", 40], ["시제품", "실제로 써 볼 수 있다", 65], ["평가·개선", "고쳐서 쓸 만해지다", 85]];var r=document.getElementById('r1');function u(){var x=D[+r.value];document.getElementById('d1').textContent=x[0];document.getElementById('t1').textContent=x[1];document.getElementById('b1').style.width=x[2]+'%';document.getElementById('m1').textContent=' '+x[2];document.getElementById('r1V').textContent=x[0];}r.oninput=u;u();})();</script></section>
+<section class="panel" data-lesson="2"><h1>안전한 이용</h1><p class="q">창작물을 쓰는 방법은 얼마나 안전할까?</p><div class="stage"><div><div class="card"><div class="big" id="d2" style="font-size:28px"></div><p id="t2" style="margin:6px 0 0"></p><div class="meter"><span>안전한 이용(모형)<b id="m2"></b></span><i><b id="b2" style="width:0"></b></i></div></div></div><div class="side"><div class="rng"><label for="r2">이용 방법 <b id="r2V"></b></label><input type="range" id="r2" min="0" max="3" step="1" value="0"></div><p class="note">막대 값은 이해를 돕기 위한 <b>모형</b>으로 실제 통계가 아닙니다.</p></div></div>
+<script>(function(){var D=[["허락 없이 복사", "저작권 침해가 될 수 있다", 5], ["출처만 밝힘", "이용 조건에 따라 부족할 수 있다", 40], ["허락 + 출처", "권리자의 허락을 받고 출처를 쓴다", 85], ["이용 조건 확인", "이용 허락 표시를 확인하고 지킨다", 95]];var r=document.getElementById('r2');function u(){var x=D[+r.value];document.getElementById('d2').textContent=x[0];document.getElementById('t2').textContent=x[1];document.getElementById('b2').style.width=x[2]+'%';document.getElementById('m2').textContent=' '+x[2];document.getElementById('r2V').textContent=x[0];}r.oninput=u;u();})();</script></section>
+<script src="../../assets/sim.js"></script>
+</body></html>

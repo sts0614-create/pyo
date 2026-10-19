@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>게임 · 문제 해결 단계 맞추기</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@700;900&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../../assets/game.css">
+</head>
+<body>
+<div class="top"><a href="../index.html#u1">← 기술·가정 목록</a><div class="rounds" id="rounds"></div></div>
+<main>
+  <h1>문제 해결 단계 맞추기</h1>
+  <p class="q" id="q"></p>
+  <div class="hud"><span>맞힌 수 <b id="score">0</b></span><span>연속 <b id="streak">0</b></span><span>남은 카드 <b id="left">0</b></span></div>
+  <div class="card" id="card"></div>
+  <div class="bins" id="bins"></div>
+  <div class="flash" id="flash" aria-live="polite"></div>
+  <p class="how">단추를 누르거나, 키보드 1~4로 고릅니다.</p>
+  <div class="review" id="review" hidden></div>
+</main>
+<script>
+window.R={
+ step:{name:'어느 단계일까',q:'활동을 알맞은 문제 해결 단계로 보내자.',bins:[['문제 확인','불편 정의'],['정보 수집','자료·조사'],['방안 탐색·선정','아이디어 → 선택']],cards:[
+  ['불편한 점을 관찰하고 한 문장으로 정리한다',0,'문제를 정의하는 일.'],['사용자에게 면담한다',1,'정보 수집.'],['비슷한 제품 사례를 찾아본다',1,'정보 수집.'],
+  ['아이디어를 열 개 쓴다',2,'탐색.'],['기준표로 대안을 비교한다',2,'선정.'],['누구의 문제인지 묻는다',0,'문제 확인.']]},
+ think:{name:'확산일까 수렴일까',q:'생각의 방식을 가려내자.',bins:[['확산적 사고','많이, 비판 없이'],['수렴적 사고','기준으로 고르기']],cards:[
+  ['엉뚱한 아이디어도 모두 적는다',0,'확산.'],['안전·비용 기준으로 점수를 매긴다',1,'수렴.'],['아이디어 마인드맵을 넓힌다',0,'확산.'],['후보를 셋으로 줄인다',1,'수렴.'],['생각 없이 떠오르는 대로 낸다',0,'확산.'],['가장 쉬운 방법을 고른다',1,'수렴.']]},
+ claim:{name:'사실일까 주장일까',q:'1단원 자료에 담긴 말을 가려내자.',bins:[['사실','확인할 수 있는 일'],['주장','판단·평가·광고']],cards:[
+  ['등각 투상은 세 축을 같은 각도로 그린다.',0,'개념.'],['이 신제품은 세상을 바꿀 것이다.',1,'광고의 주장.'],
+  ['적정 기술은 현지 자원과 지식으로 쓰기 쉬운 기술이다.',0,'개념.'],['새 기술은 모두에게 이익이다.',1,'평가: 이익과 부담이 갈린다.'],
+  ['규격이 같으면 부품을 바꾸기 쉽다.',0,'표준화의 장점.'],['시제품은 항상 완벽해야 한다.',1,'주장: 실패를 확인하려고 만든다.']]}
+};
+</script>
+<script src="../../assets/game-sort.js"></script>
+</body>
+</html>
